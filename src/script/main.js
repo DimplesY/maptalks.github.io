@@ -10,8 +10,8 @@ $(".action-button").click(function () {
 });
 
 function getVersion() {
-    $.get('https://raw.githubusercontent.com/maptalks/maptalks.js/master/package.json', function(result){
-       $('.secondary-text').text('version: ' + result.version);
+    $.get('https://registry.npmjs.org/maptalks-gl', function(result){
+       $('.secondary-text').text('version: ' + result['dist-tags'].latest);
     }, 'json');
 }
 
